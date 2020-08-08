@@ -11,6 +11,7 @@
 .tweetBox__input {
   padding: 20px;
   display: flex;
+  width: 100%;
 }
 
 .tweetBox__input > input {
@@ -36,4 +37,5 @@
 .tweetBox__inputImage {
   border: none;
   padding: 10px;
+  width: 100%;
 }
