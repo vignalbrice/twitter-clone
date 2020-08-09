@@ -14,10 +14,21 @@
 .widgets__input > input {
   border: none;
   background-color: var(--twitter-background);
+  padding: 6px;
+  margin-left: 10px;
 }
-
+.widgets__input > input::placeholder {
+  font-size: 15px;
+}
+.widgets__inputActive {
+  background-color: #fff;
+  border: 1px solid var(--twitter-color);
+}
+.widgets__input > input:focus {
+  outline: none !important;
+}
 .widgets__searchIcon {
-  color: gray;
+  color: gray !important;
 }
 .widgets__widgetContainer {
   margin-top: 15px;

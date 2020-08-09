@@ -2,7 +2,7 @@ import React from "react";
 import "./Feed.css";
 import TweetBox from "../TweetBox/TweetBox";
 import Post from "../Post/Post";
-import db from "../../API/firebase";
+import { db } from "../../API/firebase";
 import FlipMove from "react-flip-move";
 
 const Feed = () => {
@@ -13,7 +13,7 @@ const Feed = () => {
       setPosts(snapshot.docs.map((doc) => doc.data()));
     });
   }, []);
-  console.log(posts);
+  console.log(posts.map((p) => p.timestamp));
   return (
     <div className="feed">
       <div className="feed__header">

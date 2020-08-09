@@ -1,6 +1,6 @@
 import React from "react";
 import "./Post.css";
-import { Avatar } from "@material-ui/core";
+import { Avatar, IconButton } from "@material-ui/core";
 import {
   VerifiedUser,
   ChatBubbleOutline,
@@ -35,10 +35,18 @@ const Post = React.forwardRef(
           </div>
           <img src={image} alt="" />
           <div className="post__footer">
-            <ChatBubbleOutline fontSize="small" />
-            <Repeat fontSize="small" />
-            <FavoriteBorder fontSize="small" />
-            <Publish fontSize="small" />
+            <IconButton>
+              <ChatBubbleOutline fontSize="small" />
+            </IconButton>
+            <IconButton>
+              <Repeat fontSize="small" />
+            </IconButton>
+            <IconButton>
+              <FavoriteBorder fontSize="small" />
+            </IconButton>
+            <IconButton>
+              <Publish fontSize="small" />
+            </IconButton>
           </div>
         </div>
       </div>

@@ -6,6 +6,8 @@
 }
 .post__body > img {
   border-radius: 20px;
+  max-width: 300px;
+  max-height: 300px;
   flex: 1;
 }
 .post__headerDescription {
@@ -17,9 +19,13 @@
   margin-bottom: 5px;
 }
 .post__footer {
-  display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.post__footer > .MuiIconButton-root:hover {
+  color: var(--twitter-color) !important;
 }
 
 .post__badge {

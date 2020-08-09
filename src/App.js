@@ -6,7 +6,7 @@ import Widgets from "./components/Widgets/Widgets";
 
 function App() {
   return (
-    <div className="app">
+    <div className="twitter__app">
       <Sidebar />
       <Feed />
       <Widgets />

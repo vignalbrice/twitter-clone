@@ -3,10 +3,10 @@ body {
   --twitter-background: #e6ecf0;
 }
 
-.app {
+.twitter__app {
   display: flex;
   height: 100vh;
-  max-width: 1300px;
+  width: 1300px;
   margin-left: auto !important;
   margin-right: auto !important;
   padding: 0 10px;
