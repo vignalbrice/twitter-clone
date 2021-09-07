@@ -1,6 +1,6 @@
 import React from "react";
 import "./TweetBox.css";
-import { Avatar, Button, IconButton, Grid } from "@material-ui/core";
+import { Avatar, Button, IconButton } from "@material-ui/core";
 import { db, storage, timestamp } from "../../API/firebase";
 import ImageIcon from "@material-ui/icons/Image";
 import GifIcon from "@material-ui/icons/Gif";
@@ -68,41 +68,45 @@ const TweetBox = () => {
   };
   console.log(chosenEmoji && chosenEmoji.emoji);
   return (
-    <div className="tweetBox">
+    <div className='tweetBox'>
       <form>
-        <div className="tweetBox__input">
+        <div className='tweetBox__input'>
           <Avatar
-            src="https://lh3.googleusercontent.com/ogw/ADGmqu9baHOhncVkae988ozjCvtL5qngjEMdclwu_Hx5=s83-c-mo"
+            src='https://lh3.googleusercontent.com/ogw/ADGmqu9baHOhncVkae988ozjCvtL5qngjEMdclwu_Hx5=s83-c-mo'
             sizes={64}
           />
           <input
             placeholder="What's happening?"
-            type="text"
-            className="tweetBox__input"
+            type='text'
+            className='tweetBox__input'
             value={tweetMessage}
             onChange={(e) => setTweetMessage(e.target.value)}
           />
         </div>
         {imagePreviewUrl.length > 0 && (
-          <div className="tweetBox__boxImgPreview">
+          <div className='tweetBox__boxImgPreview'>
             <IconButton onClick={() => setImagePreviewUrl("")}>
               <CloseRounded />
             </IconButton>
-            <img src={imagePreviewUrl} className="tweetBox__imgPreview" />
+            <img
+              src={imagePreviewUrl}
+              className='tweetBox__imgPreview'
+              alt='tweet-img'
+            />
           </div>
         )}
         {isOpenEmoji && <Picker onEmojiClick={onEmojiClick} />}
-        <div className="tweetBox__contentIcons">
-          <div className="tweetBox__icons">
+        <div className='tweetBox__contentIcons'>
+          <div className='tweetBox__icons'>
             <input
-              type="file"
-              name="image"
-              id="file-input"
-              className="tweetBox__inputImage"
+              type='file'
+              name='image'
+              id='file-input'
+              className='tweetBox__inputImage'
               onChange={(e) => loadPreviewImage(e)}
             />
-            <label htmlFor="file-input">
-              <IconButton aria-label="upload picture" component="span">
+            <label htmlFor='file-input'>
+              <IconButton aria-label='upload picture' component='span'>
                 <ImageIcon />
               </IconButton>
             </label>
@@ -120,9 +124,9 @@ const TweetBox = () => {
             </IconButton>
           </div>
           <Button
-            type="submit"
+            type='submit'
             onClick={sendTweet}
-            className="tweetBox_tweetButton"
+            className='tweetBox_tweetButton'
             disabled={
               tweetMessage.length > 0 || imagePreviewUrl.length > 0
                 ? false
